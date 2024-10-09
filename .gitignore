@@ -1,0 +1,21 @@
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+.mvn/
+
+_build/
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+charlie-fx-build/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store

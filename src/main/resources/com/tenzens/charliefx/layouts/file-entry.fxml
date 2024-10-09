@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+<VBox fx:id="mainBox" spacing="10.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <children>
+      <HBox fx:id="titleHBox" alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <StackPane maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" styleClass="file-preview-icon">
+                <SVGPath fx:id="filePreviewIcon" content="M12.5 2H15.2C16.8802 2 17.7202 2 18.362 2.32698C18.9265 2.6146 19.3854 3.07354 19.673 3.63803C20 4.27976 20 5.11984 20 6.8V17.2C20 18.8802 20 19.7202 19.673 20.362C19.3854 20.9265 18.9265 21.3854 18.362 21.673C17.7202 22 16.8802 22 15.2 22H8.8C7.11984 22 6.27976 22 5.63803 21.673C5.07354 21.3854 4.6146 20.9265 4.32698 20.362C4 19.7202 4 18.8802 4 17.2V16.5M16 13H11.5M16 9H12.5M16 17H8M6 10V4.5C6 3.67157 6.67157 3 7.5 3C8.32843 3 9 3.67157 9 4.5V10C9 11.6569 7.65685 13 6 13C4.34315 13 3 11.6569 3 10V6" fill="transparent" scaleX="2.0" scaleY="2.0" />
+            </StackPane>
+            <Label fx:id="titleLabel" styleClass="entry-title" text="title-label" />
+         </children>
+      </HBox>
+        <HBox>
+            <children>
+            <HBox spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="dateLabel" styleClass="entry-additional-info-label" text="Label" />
+                  <Label fx:id="fileSizeLabel" styleClass="entry-additional-info-label" text="Label" />
+               </children>
+            </HBox>
+            <Pane HBox.hgrow="ALWAYS" />
+                <VBox alignment="CENTER">
+                    <children>
+                        <HBox spacing="8.0" VBox.vgrow="NEVER">
+                            <children>
+                        <StackPane>
+                           <children>
+                              <Button fx:id="actionButton" maxHeight="17.0" maxWidth="17.0" minHeight="17.0" minWidth="17.0" mnemonicParsing="false">
+                                  <graphic>
+                                      <SVGPath content="M12 3.25C12.4142 3.25 12.75 3.58579 12.75 4L12.75 18.1893L17.4697 13.4697C17.7626 13.1768 18.2374 13.1768 18.5303 13.4697C18.8232 13.7626 18.8232 14.2374 18.5303 14.5303L12.5303 20.5303C12.3897 20.671 12.1989 20.75 12 20.75C11.8011 20.75 11.6103 20.671 11.4697 20.5303L5.46967 14.5303C5.17678 14.2374 5.17678 13.7626 5.46967 13.4697C5.76256 13.1768 6.23744 13.1768 6.53033 13.4697L11.25 18.1893L11.25 4C11.25 3.58579 11.5858 3.25 12 3.25Z" />
+                                  </graphic>
+                              </Button>
+                              <ProgressIndicator fx:id="progressIndicator" styleClass="progress-indicator-style" progress="0.0" />
+                           </children>
+                        </StackPane>
+                                <Button fx:id="removeButton" maxHeight="17.0" maxWidth="17.0" minHeight="17.0" minWidth="17.0" mnemonicParsing="false">
+                                    <graphic>
+                                        <SVGPath content="M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6M18 6V16.2C18 17.8802 18 18.7202 17.673 19.362C17.3854 19.9265 16.9265 20.3854 16.362 20.673C15.7202 21 14.8802 21 13.2 21H10.8C9.11984 21 8.27976 21 7.63803 20.673C7.07354 20.3854 6.6146 19.9265 6.32698 19.362C6 18.7202 6 17.8802 6 16.2V6M14 10V17M10 10V17"/>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</VBox>

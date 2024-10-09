@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+<StackPane fx:id="mainStackPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tenzens.charliefx.Views.MainViewController">
+    <VBox prefHeight="700.0" prefWidth="400.0">
+    <children>
+      <HBox>
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+         <children>
+          <Pane styleClass="header" HBox.hgrow="ALWAYS">
+              <children>
+                  <Label text="Entries" />
+              </children>
+          </Pane>
+            <VBox alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" spacing="8.0" VBox.vgrow="NEVER">
+                     <children>
+                         <Button maxWidth="20.0" minHeight="20.0" minWidth="20.0" onAction="#onAddEntryClicked" prefHeight="20.0" prefWidth="20.0" styleClass="add-button">
+                             <graphic>
+                                 <SVGPath scaleY="0.8" scaleX="0.8" strokeLineCap="ROUND" strokeWidth="2" stroke="white" content="M6 12H18M12 6V18" />
+                             </graphic>
+                         </Button>
+                        <Button onAction="#onRefreshClicked" maxHeight="17.0" maxWidth="17.0" minHeight="17.0" minWidth="17.0" mnemonicParsing="false" styleClass="refresh-button"/>
+                        <Button fx:id="signoutButton" maxHeight="17.0" maxWidth="17.0" minHeight="17.0" minWidth="17.0" mnemonicParsing="false" styleClass="signout-button">
+                            <graphic>
+                                <SVGPath styleClass="signout-button-svg" stroke="#636363" scaleY="0.85" scaleX="0.85" strokeWidth="1.8" fill="transparent" content="M15 16.5V19C15 20.1046 14.1046 21 13 21H6C4.89543 21 4 20.1046 4 19V5C4 3.89543 4.89543 3 6 3H13C14.1046 3 15 3.89543 15 5V8.0625M11 12H21M21 12L18.5 9.5M21 12L18.5 14.5"/>
+                            </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <TextField fx:id="searchField" minHeight="40.0" promptText="Search" styleClass="text-field">
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" top="10.0" />
+         </VBox.margin>
+      </TextField>
+      <HBox>
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" top="10.0" />
+         </VBox.margin>
+         <children>
+            <Label fx:id="visibleEntriesInfoLabel" text="All entries" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Label fx:id="numberOfEntriesLabel" />
+         </children>
+      </HBox>
+        <StackPane VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets bottom="5.0" left="12.0" right="10.0" top="10.0" />
+            </VBox.margin>
+
+            <ListView fx:id="entryListView" styleClass="entry-list" VBox.vgrow="ALWAYS"/>
+            <ListView fx:id="searchResultListView" styleClass="entry-list" VBox.vgrow="ALWAYS"/>
+        </StackPane>
+
+         <HBox fx:id="smallErrorBox" visible="false" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+            <children>
+               <Label minHeight="15.0" minWidth="15.0" prefHeight="15.0" prefWidth="15.0" styleClass="error-icon-label">
+                  <HBox.margin>
+                     <Insets />
+                  </HBox.margin>
+               </Label>
+               <Label fx:id="errorLabel" text="Connection error">
+                  <HBox.margin>
+                     <Insets />
+                  </HBox.margin>
+               </Label>
+            </children>
+            <VBox.margin>
+               <Insets bottom="15.0" left="15.0" right="10.0" />
+            </VBox.margin>
+         </HBox>
+    </children>
+</VBox>
+</StackPane>

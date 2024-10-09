@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.shape.SVGPath?>
+<VBox fx:id="entryEditor" prefHeight="700.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tenzens.charliefx.Views.EntryEditorController">
+   <children>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <VBox.margin>
+            <Insets bottom="20.0" left="30.0" right="30.0" top="30.0" />
+         </VBox.margin>
+         <children>
+            <TextField styleClass="editor-title-field" fx:id="titleTextField" promptText="Title" prefHeight="30.0" prefWidth="1000.0" />
+            <Button styleClass="editor-apply-button" fx:id="applyButton" onAction="#apply" maxHeight="18.0" maxWidth="18.0" minHeight="18.0" minWidth="18.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="18.0">
+               <graphic>
+                  <SVGPath content="M25.0455 3.26954C25.7466 2.41601 25.623 1.15572 24.7695 0.454606C23.9159 -0.246508 22.6557 -0.122951 21.9545 0.730579L20.0257 3.07872C17.8996 1.16483 15.0858 5.78753e-05 12 5.78753e-05C5.37258 5.78753e-05 0 5.37264 0 12.0001C0 18.6275 5.37258 24.0001 12 24.0001C18.6274 24.0001 24 18.6275 24 12.0001C24 9.93518 23.4785 7.99211 22.5599 6.29539L25.0455 3.26954ZM18.1189 5.40007L11.8546 13.0262L8.41421 9.58584C7.63316 8.8048 6.36684 8.8048 5.58579 9.58584C4.80474 10.3669 4.80474 11.6332 5.58579 12.4143L10.5858 17.4143C10.9849 17.8134 11.534 18.0252 12.0977 17.9977C12.6614 17.9701 13.1872 17.7056 13.5455 17.2695L20.4421 8.8736C20.8029 9.84745 21 10.9007 21 12.0001C21 16.9706 16.9706 21.0001 12 21.0001C7.02944 21.0001 3 16.9706 3 12.0001C3 7.02949 7.02944 3.00006 12 3.00006C14.3629 3.00006 16.5131 3.91065 18.1189 5.40007Z" />
+               </graphic>
+            </Button>
+            <Button styleClass="editor-cancel-button" fx:id="cancelButton" onAction="#cancel" maxHeight="18.0" maxWidth="18.0" minHeight="18.0" minWidth="18.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="18.0">
+               <graphic>
+                  <SVGPath strokeWidth="3.5" scaleY="1.1" scaleX="1.1" strokeLineCap="ROUND" content="M19 5L5 19M5.00001 5L19 19" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <TextArea promptText="Entry" fx:id="textArea" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets bottom="15.0" left="30.0" right="30.0" />
+         </VBox.margin>
+      </TextArea>
+      <Button fx:id="colorButton" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0">
+         <VBox.margin>
+            <Insets bottom="15.0" left="15.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>

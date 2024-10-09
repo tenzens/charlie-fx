@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <ImageView fitHeight="180.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/empty-placeholder.png" />
+        </image>
+    </ImageView>
+
+    <Label maxWidth="300.0" alignment="CENTER" text="Your search yielded no results..." wrapText="true">
+      <VBox.margin>
+         <Insets top="15.0" />
+      </VBox.margin>
+    </Label>
+</VBox>
