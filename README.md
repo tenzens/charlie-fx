@@ -7,9 +7,9 @@ your server instance and distributed to your other devices.
 
 ⚠️ This project is still under development, expect possible breaking changes.
 
-<img src="images/Screenshot-0.png" width="250px" alt="img"/>
-<img src="images/Screenshot-1.png" width="250px" alt="img"/>
-<img src="images/Screenshot-2.png" width="250px" alt="img"/>
+<img src="images/Screenshot-0.png" width="200px" alt="img"/>
+<img src="images/Screenshot-1.png" width="200px" alt="img"/>
+<img src="images/Screenshot-2.png" width="200px" alt="img"/>
 
 ## Features
 - Offline first note-taking
@@ -69,8 +69,8 @@ information on that.
 - The way the entries are stored using sqlite could be improved
 
 ## Credits
-This project makes use of many different images and icons. 
-Their creators and licenses are specified in the credits file.
+This project makes use of many different images and icons as well as third party libraries. 
+Their creators and licenses are specified in the NOTICE file.
 
 ## Motivation behind this project
 I had already worked on a project like
