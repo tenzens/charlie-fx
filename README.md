@@ -7,9 +7,11 @@ your server instance and distributed to your other devices.
 
 ⚠️ This project is still under development, expect possible breaking changes.
 
-<img src="images/Screenshot-0.png" width="200px" alt="img"/>
-<img src="images/Screenshot-1.png" width="200px" alt="img"/>
-<img src="images/Screenshot-2.png" width="200px" alt="img"/>
+<p float="left">
+    <img src="images/Screenshot-0.png" width="250px" alt="img"/>
+    <img src="images/Screenshot-1.png" width="250px" alt="img"/>
+    <img src="images/Screenshot-2.png" width="250px" alt="img"/>
+</p>
 
 ## Features
 - Offline first note-taking
